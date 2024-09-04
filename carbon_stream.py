@@ -18,15 +18,11 @@ class FrontendParams:
         'low_performance': 0.16,
         'high_performance': 0.31,
     }
-    # ACCESS_COST = {
-    #     'low_performance': {'read': 0.0000000004, 'write': 0.0000000004},
-    #     'high_performance': {'read': 0.0000000001 * 1024, 'write': 0.0000000001 * 1024},
-    # }
-    ACCESS_COST = {
+    ACCESS_COST = { # kg CO2e/GB/second
         'low_performance': {'read': 0.0000000004, 'write': 0.0000000004},
         'high_performance': {'read': 0.000000087, 'write': 0.000000087},
     }
-    IDLE_COST = {
+    IDLE_COST = { # kg CO2e/GB/second
         'low_performance': 0.00000000013,
         'high_performance': 0.000000087,
     }
@@ -52,15 +48,11 @@ class CacheParams:
         'DRAM': 0.31,
         'flash': 0.16,
     }
-    # ACCESS_COST = {
-    #     'DRAM': {'read': 0.0000000001 * 1024, 'write': 0.0000000001 * 1024},
-    #     'flash': {'read': 0.0000000004, 'write': 0.0000000004},
-    # }
-    ACCESS_COST = {
+    ACCESS_COST = { # kg CO2e/GB/second
         'DRAM': {'read': 0.000000087, 'write': 0.000000087},
         'flash': {'read': 0.0000000004, 'write': 0.0000000004},
     }
-    IDLE_COST = {
+    IDLE_COST = { # kg CO2e/GB/second
         'DRAM': 0.000000087,
         'flash': 0.00000000013,
     }
@@ -92,18 +84,6 @@ class BackendParams:
         'tape': 0.00042,
         'glass': 0.0001,
     }
-    # ACCESS_COST = {
-    #     'SSD': {'read': 0.0000015, 'write': 0.0000019},
-    #     'HDD': {'read': 0.0000013, 'write': 0.0000013},
-    #     'tape': {'read': 0.000000065, 'write': 0.000000065},
-    #     'glass': {'read': 0.00000001, 'write': 0.0000001},
-    # }
-    # IDLE_COST = {
-    #     'SSD': 0.00000049,
-    #     'HDD': 0.0000007,
-    #     'tape': 0,
-    #     'glass': 0,
-    # }
     ACCESS_COST = { # kg CO2e/GB/second
         'SSD': {'read': 0.0000000004, 'write': 0.00000000049},
         'HDD': {'read': 0.000000000073, 'write': 0.000000000073},

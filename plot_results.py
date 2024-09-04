@@ -45,24 +45,6 @@ print(f"  Cache Hit Rate: {lowest_cost_row['Cache Hit Rate']:.2f}")
 plot_dir = 'plots'
 os.makedirs(plot_dir, exist_ok=True)
 
-# Plot each configuration with multiple costs on the same graph
-# for index, row in filtered_results.iterrows():
-#     config_name = f"Frontend_{row['Frontend']}_Cache_{row['Cache']}_Backend_{row['Backend']}"
-#     plt.figure(figsize=(10, 6))
-
-#     # Use the calculated costs directly from the CSV
-#     costs = [row['Embodied Cost'], row['Active Cost'], row['Idle Cost'], row['Replacement Cost']]
-#     labels = ['Embodied Cost', 'Active Cost', 'Idle Cost', 'Replacement Cost']
-    
-#     plt.bar(labels, costs, color=['blue', 'orange', 'green', 'red'])
-#     plt.title(f'Carbon Costs for SLO Latency={slo_latency} ms and Throughput={slo_throughput} req/s\nConfiguration: {config_name} over {row["Simulation Years"]} years')
-#     plt.ylabel('Carbon Cost (kg CO2e)')
-#     plt.grid(True)
-    
-#     plt.tight_layout()
-#     plt.savefig(os.path.join(plot_dir, f'carbon_cost_breakdown_{config_name}_slo_{slo_latency}ms_{slo_throughput}reqs.png'))
-#     plt.show()
-
 # Plot total cumulative carbon costs across all configurations with breakdowns
 plt.figure(figsize=(12, 8))
 
@@ -98,8 +80,3 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig(os.path.join(plot_dir, f'total_carbon_costs_breakdown_slo_{slo_latency}ms_{slo_throughput}reqs.png'))
 plt.show()
-
-# Save the results to an Excel spreadsheet
-# excel_output_file = os.path.splitext(results_file)[0] + '.xlsx'
-# results.to_excel(excel_output_file, index=False)
-# print(f"Results saved to spreadsheet: {excel_output_file}")
