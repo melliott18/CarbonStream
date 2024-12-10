@@ -1,0 +1,10 @@
+{
+    "latency": {
+        "network": 1,
+        "processing": 0.5
+    },
+    "storage_capacity": 10000000000,
+    "active_idle_ratio": 0.7,
+    "read_write_ratio": 0.7,
+    "carbon_intensity": 0.000000139
+}

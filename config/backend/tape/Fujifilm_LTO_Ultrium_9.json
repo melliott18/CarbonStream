@@ -1,0 +1,18 @@
+{
+    "name": "Fujifilm LTO Ultrium 9",
+    "latency": 10000,
+    "throughput": 0.4,
+    "embodied_cost": {
+        "initial": 7.56,
+        "replacement": 7.56
+    },
+    "power_consumption": {
+        "active": {
+            "read": 0.26,
+            "write": 0.26
+        },
+        "idle": 0
+    },
+    "lifespan": 30,
+    "capacity": 18000
+}

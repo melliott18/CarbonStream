@@ -1,0 +1,18 @@
+{
+    "name": "Seagate Exos X18",
+    "latency": 4.16,
+    "throughput": 0.27,
+    "embodied_cost": {
+        "initial": 30.6,
+        "replacement": 30.6
+    },
+    "power_consumption": {
+        "active": {
+            "read": 9.5,
+            "write": 9.5
+        },
+        "idle": 5.3
+    },
+    "lifespan": 5,
+    "capacity": 18000
+}
